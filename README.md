@@ -2,7 +2,7 @@
 
 An interactive simulator for a core supply chain question: **when and how much should a company reorder when demand is uncertain?**
 
-**[Live demo ↗](link)** &nbsp;no installation needed (if the app is asleep, click the wake-up button and wait a moment)
+**[Live demo ↗](https://supplychainx.streamlit.app)** &nbsp;no installation needed (if the app is asleep, click the wake-up button and wait a moment)
 
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue) ![License](https://img.shields.io/badge/license-MIT-green)
 &nbsp;Built with Python · Streamlit · NumPy · pandas · Plotly
