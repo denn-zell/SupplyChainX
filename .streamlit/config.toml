@@ -1,0 +1,10 @@
+[theme]
+base = "light"
+primaryColor = "#2563EB"
+textColor = "#0F172A"
+
+[client]
+toolbarMode = "minimal"   # hides the toolbar menu in the top right corner
+
+[browser]
+gatherUsageStats = false  # no anonymous usage statistics are sent to Streamlit
