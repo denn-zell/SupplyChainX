@@ -58,15 +58,11 @@ TEXT_COLORS = {
     "reorder": "#B45309",
 }
 
-# Font of all charts; matches the font of the page text (see the stylesheet below)
-FONT_FAMILY = "Inter, sans-serif"
-
 # Legend above the plot, aligned to the left (the toolbar of the chart sits on the right)
 LEGEND = dict(orientation="h", yanchor="bottom", y=1.02, xanchor="left", x=0)
 
 # Shared Plotly layout for all charts
 CHART_LAYOUT = dict(
-    font=dict(family=FONT_FAMILY),
     template="plotly_white",
     plot_bgcolor="white",
     paper_bgcolor="white",
@@ -76,7 +72,6 @@ CHART_LAYOUT = dict(
         bgcolor="white",
         bordercolor=COLORS["border"],
         font_size=12,
-        font_family=FONT_FAMILY,
         namelength=-1
     ),
 )
@@ -86,8 +81,6 @@ CHART_LAYOUT = dict(
 # stable attributes and cover both the current and the older tab markup.
 CUSTOM_CSS = """
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
     /* Page background: light gray, so that white cards and the white sidebar stand out.
        The header and the containers around the main area are transparent to show it. */
     body .stApp {
@@ -97,17 +90,6 @@ CUSTOM_CSS = """
     [data-testid="stAppViewContainer"],
     [data-testid="stMain"] {
         background: transparent;
-    }
-
-    /* Inter for the main text elements. Streamlit sets the font on many components itself, so the
-       elements are listed explicitly instead of using a wildcard, which would also change icon fonts. */
-    h1, h2, h3, h4, h5, h6,
-    [data-testid="stMarkdownContainer"] p,
-    [data-testid="stMarkdownContainer"] li,
-    [data-testid="stMetricValue"],
-    [role="tab"],
-    input {
-        font-family: 'Inter', sans-serif;
     }
 
     /* Main content area spacing */
