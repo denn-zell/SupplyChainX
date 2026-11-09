@@ -64,7 +64,7 @@ A single item is managed with a **periodic-review (s, Q) policy**. Each week, in
 - **Demand** is normally distributed, rounded to whole units and set to 0 if negative. If σ is large relative to μ, this raises the effective mean demand to $E[\max(0, X)] = \mu\,\Phi(z) + \sigma\,\varphi(z)$ with $z = \mu / \sigma$. The app shows a warning and the effective mean.
 - **Fill rate** is the share of the total demand served immediately from stock in the week it occurs. It is not the cycle service level.
 - **Timing.** An order placed at the end of week *t* arrives at the start of week *t* + *L*, before that week's demand. It is therefore exposed to the demand of *L* − 1 full weeks. Keep this in mind when comparing results with textbook formulas that use *L*.
-- **Randomness.** The same seed gives the same results. Run 1 of the Monte Carlo analysis equals the single run, and the policy scan evaluates all policies on the same demand histories (common random numbers), which reduces the noise in cost differences.
+- **Randomness.** The same seed gives the same results. Run 1 of the Monte Carlo analysis equals the single run, and the policy scan evaluates all policies on the same demand histories (common random numbers), which reduces the noise in the cost differences between similar policies.
 
 ## Model validation
 
