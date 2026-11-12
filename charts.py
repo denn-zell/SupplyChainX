@@ -254,7 +254,10 @@ def histogram_chart(
     Returns:
         The Plotly figure.
     """
-    fig = go.Figure(go.Histogram(x=values, nbinsx=30, marker_color=bar_color, showlegend=False))
+    fig = go.Figure(go.Histogram(
+        x=values, nbinsx=30, marker_color=bar_color, showlegend=False,
+        hovertemplate='%{x}<br>Number of runs: %{y}<extra></extra>'
+    ))
     add_reference_lines(fig, lines)
     # The lines are shapes, so a click on a legend entry could not hide them: the entries are not clickable
     legend = {**LEGEND, "itemclick": False, "itemdoubleclick": False}
